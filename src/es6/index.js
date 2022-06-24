@@ -68,6 +68,15 @@ let team2 = [
 let todos = [
     'Alina',...team1, ...team2
 ]
+let grupo1 = [
+    'Ali', 'Marlene', 'Lilieth'
+]
+let grupo2 = [
+    'Ali', 'Monserrat', 'Lizeth'
+]
+let pruebaSet = [...new
+    Set(['Deni', ...grupo1,...grupo2])];
 console.log (todos);
 console.log (team1);
 console.log (team2);
+console.log (pruebaSet);
