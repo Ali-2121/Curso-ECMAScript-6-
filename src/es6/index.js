@@ -74,9 +74,58 @@ let grupo1 = [
 let grupo2 = [
     'Ali', 'Monserrat', 'Lizeth'
 ]
+//el [...new Set([]) nos permite evitar duplicados en el array]
 let pruebaSet = [...new
     Set(['Deni', ...grupo1,...grupo2])];
+
 console.log (todos);
 console.log (team1);
 console.log (team2);
 console.log (pruebaSet);
+
+//PARÁMETROS EN OBJETOS 
+let miNombre = 'Alina';
+let miEdad = 19;
+
+//Antes
+obj = {miNombre:miNombre, miEdad:miEdad};
+
+//es6 
+obj2 = {miNombre, miEdad};
+console.log (obj);
+console.log (obj2);
+
+//ARROW FUNCTIONS
+
+const hermanos = [
+    {name: 'Alina', age: 33, country : 'CDMX'},
+    {name: 'Deniss', age: 30, country : 'EDO MEX' },
+    {name: 'Gerado', age: 20, country : 'EDO MEX'},
+];
+
+//Antes: Tenías que pasarle una función anónima y llaves para que te retornara algo, la sintáxis era larga, poco amigable y más complicada de entender
+let losHermanos = hermanos.map(function (item){
+    console.log (item.age);
+})
+
+// es6: Ahora solo ponemos un => del lado izquierdo lo que sería el parámetro de la función y del lado derecho el código que deseamos ejecutar 
+
+let losHermanoss = hermanos.map(item => console.log(item.age));
+
+//PROMESAS
+//Significan que algo va a suceder 
+const helloPromise = () => {
+     return new Promise ( (resolve, reject ) => {
+         if (true){
+            resolve ('Hey');
+         }
+         else {
+            reject ('Ups !!');
+         }
+         } );
+}
+
+helloPromise ()
+  .then (response => console.log(response))
+  .then (() => console.log('Esta es otra respuesta'))
+  .catch (error => console.log(error));
