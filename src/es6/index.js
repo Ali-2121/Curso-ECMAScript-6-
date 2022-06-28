@@ -129,3 +129,34 @@ helloPromise ()
   .then (response => console.log(response))
   .then (() => console.log('Esta es otra respuesta'))
   .catch (error => console.log(error));
+
+// CLASES: Es una mejor manera de manejar la sintaxis, haciéndola más clara para el manejo de objetos y la herencia dentro de JS
+
+//Funcionan como una función constructora, usas la palabra reservada "clss" y le ponen el nombre que quieras
+class calculator {
+    constructor(){
+        this.valueA = 0;
+        this.valueB = 0;
+    }
+
+ //Dentro hay un método, puede usar tantos métodos como necesites 
+    sum(valueA, valueB){
+        this.valueA = valueA;
+        this.valueB = valueB;
+        return this.valueA + this.valueB;
+    }
+}
+
+const calc = new calculator (); //Esta variable manda llamar la clase, por eso termina con paréntesis.
+//Usas "el operador: new" que genera una nueva instancia del constructor que tienes dentro de la clase. Instancia: Objeto creado que deriva de otro objeto 
+console.log (calc.sum(8,2)); //Mandas llamar la variable que manda llamar la clase, usas el método que tienes dentro de la clase y le pasas los argumentos con los que vas a trabajar 
+
+//MÓDULOS: Es para guarda la lógica de tu proyecto en un archivo separado de tu hilo principal y exportar e importar de un documento a otro las funciones o variables que necesites y así estén disponibles en tu código 
+
+//Manera que nos enseñaron para exportar modules de un archivo a otro, pero esta forma no está soportada en todas las versiones de node
+import { holis } from './module';
+holis();
+
+//Manera que usamos nosotras, sintaxis antigua 
+const hello = require ('./module')
+console.log(hello());
