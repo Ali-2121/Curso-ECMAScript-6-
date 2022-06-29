@@ -151,7 +151,7 @@ const calc = new calculator (); //Esta variable manda llamar la clase, por eso t
 //Usas "el operador: new" que genera una nueva instancia del constructor que tienes dentro de la clase. Instancia: Objeto creado que deriva de otro objeto 
 console.log (calc.sum(8,2)); //Mandas llamar la variable que manda llamar la clase, usas el método que tienes dentro de la clase y le pasas los argumentos con los que vas a trabajar 
 
-//MÓDULOS: Es para guarda la lógica de tu proyecto en un archivo separado de tu hilo principal y exportar e importar de un documento a otro las funciones o variables que necesites y así estén disponibles en tu código 
+//MÓDULOS: Es para separar la lógica de tu proyecto en un archivo separado, en diferentes módulos, de tu hilo principal y exportar e importar de un documento a otro las funciones o variables que necesites y así estén disponibles en tu código 
 
 //Manera que nos enseñaron para exportar modules de un archivo a otro, pero esta forma no está soportada en todas las versiones de node
 import { holis } from './module';
@@ -160,3 +160,23 @@ holis();
 //Manera que usamos nosotras, sintaxis antigua 
 const hello = require ('./module')
 console.log(hello());
+
+
+
+// GENERADORES  funcion especial que retorna uan serie de valores segun el algoritmo  definido 
+
+function* helloWorld (){
+   if (true ){
+    yield 'Hello, '
+   } 
+   if (true ){
+    yield 'World'
+   } 
+} 
+const generatorHello = helloWorld ();
+console.log (generatorHello.next().value )
+console.log (generatorHello.next().value )
+console.log (generatorHello.next().value )
+
+
+
