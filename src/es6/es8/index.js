@@ -58,3 +58,29 @@ console.log(string.padEnd(26,' ,mi fruta favorita')); //Necesita saber cuantos c
 const unObjeto = {
     name: 'Esta personita',
 }
+
+const nuevaFuncion = () => {
+    return new Promise((resolve, reject) =>{
+        (false)
+        ? setTimeout (()=> resolve('Hola amigos'), 3000)
+        :reject (new Error ('Test Error'))
+    }) 
+};
+
+const nuevoAsync = async () => {
+     const espera = await nuevaFuncion();
+     console.log(espera);
+}
+
+nuevoAsync();
+
+const anotherFuction =async () =>{
+    try {
+        const hello = await nuevaFuncion();
+        console.log(hello);
+    } catch (error) {
+        console.log(error);
+    
+    }
+}
+anotherFuction();
