@@ -59,6 +59,11 @@ const unObjeto = {
     name: 'Esta personita',
 }
 
+
+//async y await
+// async nos sirve para "marcar" una función como asíncrona y su valor de retorno es una promesa. Puede contener un "await" dentro, que pone en pausa la ejecución de la función asíncrona y espera la resolución de la "promise", luego reanuda la ejecución y devuelve el valor "resolve" o "reject" de la "promise"
+
+//await Solo es aplicable a las funciones marcadas con "async", pone en espera la ejecución de la función mientras la promesa se resuelve, abriendo paso a otras funciones. Espera hasta que la promesa entre a "resolve" o "reject"
 const nuevaFuncion = () => {
     return new Promise((resolve, reject) =>{
         (false)
