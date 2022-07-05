@@ -83,7 +83,7 @@ const anotherFuction =async () =>{
     try {
         const hello = await nuevaFuncion();
         console.log(hello);
-    } catch (error) {
+    } catch (error){
         console.log(error);
     
     }
